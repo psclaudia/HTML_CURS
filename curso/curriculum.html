@@ -4,13 +4,24 @@
 	
 	<head>
 		<meta charset= "UTF-8">
-		<title>Media </title>
+		<title>Curriculum </title>
+		<style>
+			table, tr, td, th{
+				border-collapse: collapse;
+			}
+			td, th{
+				text-align: center;
+				border:1px solid black;
+				width: 20%;
+			}
+		</style>
 	</head>
 	<body>
+		 <a href = "#bottom"> GO TO END </a>
 		<section> 
-			<h2> Contact information </h2>
+			<h2 id = "top"> Contact information </h2>
 			<ul>
-				<li>Claudia Sánchez </li>
+				<li> Claudia Sánchez </li>
 				<li> 12/01/1998 </li>
 				<li> Carrer Groc, 25 </li>
 				<li> Martorell </li>
@@ -27,18 +38,58 @@
 
 		<section>
 			<h2>Professional goals</h2>
-			<ol>
-				
-
-
-			</ol>
+			<ul>
+				<li> Make projects </li>
+				<li> Manage a team </li>
+			</ul>
 			<h2>Current studies</h2>
-			<h2>Best qualities</h2>
-			<table>
-				
-				
-			</table>
+				<ul>
+					<li> ESO </li>
+					<li> Baxtillerat </li>
+					<li> Enginyeria informàtica (currently studying) </li>
+				</ul>
+			<h2>Best skills</h2>
+				<ol>
+					<li> C++ </li>
+					<li> C </li>
+					<li> SQL </li>
+					<li> Java </li>
+				</ol>
+			<h2> Languages </h2>
 
+			<table>
+			<tr>
+				<th>Language</th>
+				<th>Skills</th>
+				<th>Level</th>
+			</tr>
+			<tr>
+				<td rowspan= 2>Spanish</td>
+				<td>Writing</td>
+				<td rowspan=2>Native</td>
+			</tr>
+			<tr>
+				<td> Speaking </td>
+			</tr>
+			<tr>
+				<td rowspan= 2>Catalan</td>
+				<td>Writing</td>
+				<td rowspan=2>Native</td>
+			</tr>
+			<tr>
+				<td> Speaking </td>
+			</tr>
+			<tr>
+				<td rowspan= 2>English</td>
+				<td>Writing</td>
+				<td rowspan=2>B2</td>
+			</tr>
+			<tr>
+				<td id = "bottom"> Speaking </td>
+			</tr>
+		</table>
+		 <a href = "#top"> GO TO TOP </a>
 		 </section>
+		
 	</body>
 </html>
