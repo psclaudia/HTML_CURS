@@ -1,0 +1,1 @@
+Es importante porque su principal objetivo es mantener los estilos similares en los navegadores, ya que cada uno agrega sus propios estilos por defecto, por ejemplo suelen agregar distintos paddings, margins, font-sizes,etc. Con Normalize CSS lo que se hace es regularizarlos y que la web se vea igual independientemente del navegador donde se visualice.
