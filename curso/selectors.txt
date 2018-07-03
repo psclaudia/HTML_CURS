@@ -19,7 +19,7 @@ c) To get the middle <li> --> li:nth-of-type(2){}
 <li>
 </ul>
 
-d) To get all <p> inside <div>
+d) To get all <p> inside <div> --> div p{}
 
 <div>
 <p> </p>
@@ -29,7 +29,7 @@ d) To get all <p> inside <div>
 </div>
 <p>
 
-e) To get the deepest <p>
+e) To get the deepest <p> --> p:last-child{}
 
 <div class="second">
 <p id="first" class="second third">
@@ -39,7 +39,7 @@ e) To get the deepest <p>
 </p>
 <div>
 
-Bonus: is anything wrong here?
+Bonus: is anything wrong here? --> </p> should be at the end of <p>,not at the end of the code.
 
 <p id="first text">
 <p id="second text">
