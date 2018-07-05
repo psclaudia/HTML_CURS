@@ -1,0 +1,150 @@
+html,body{
+	min-height: 100vh;
+	margin: 0;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+}
+
+#face {
+	height: 376px;
+	width: 200px;
+	border-radius: 100px 100px 10px 10px;
+	background-color: lightgray;
+	position: absolute;
+	left: 570px;
+	bottom: 70px;
+	
+	
+}
+
+#antena {
+	height: 145px;
+    width: 18px;
+    background-color: lightgray;
+    position: absolute;
+    top: -169px;
+    left: 93px;
+}
+
+#top {
+	height: 100px;
+    width: 90px;
+    border-radius: 100px 100px 10px 10px;
+    background-color: lightgray;
+    position: absolute;
+    top: -20px;
+    left: 55px;
+	
+}
+
+#bola {
+	z-index: 1;
+    height: 27px;
+    width: 28px;
+    border-radius: 100%;
+    background-color: lightgray;
+    position: absolute;
+    top: -174px;
+    left: 33px;
+}
+
+#boca {
+	height: 66px;
+    width: 168px;
+    border: 7px solid rgb(52,73,94);
+    border-radius: 100px;
+   background-size: 29px 24px;
+    background-image: linear-gradient(to right, rgb(52,73,94) 4px, transparent 1px), 
+    linear-gradient(to bottom, rgb(52,73,94) 4px, rgb(253,227,167) 1px);
+    background-position: -5px -3px;    
+    position: absolute;
+   top: 245px;
+    left: 7px;
+}
+
+#mascara {
+    z-index: 2;
+	height: 75px;
+    width: 235px;
+    border: 7px solid rgb(52,73,94);
+    border-radius: 100px;
+    background-color: transparent;
+    position: absolute;
+    left: -24px;
+    bottom: 174px;
+}
+
+#negro {
+    z-index: 0;
+    height: 75px;
+    width: 235px;
+    border: 7px solid rgb(52,73,94);
+    border-radius: 100px;
+    background-color: black;
+    position: absolute;
+    left: -24px;
+    bottom: 174px;
+}
+#ojoL {
+    z-index: 1;
+    height: 88px;
+    width: 96px;
+    border-radius: 100px;
+    background-color: rgb(253,227,167);
+    position: absolute;
+    left: 0px;
+    bottom: 174px;
+}
+
+#puntoL {
+     z-index: 1;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(52,73,94);
+    position: absolute;
+    left: 60px;
+    bottom: 211px;
+    animation-name: movL;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#ojoR {
+    z-index: 1;
+    height: 88px;
+    width: 96px;
+    border-radius: 100px;
+    background-color: rgb(253,227,167);
+    position: absolute;
+    left: 103px;
+    bottom: 175px;
+}
+
+#puntoR {
+    z-index: 1;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(52,73,94);
+    position: absolute;
+    left: 121px;
+    bottom: 211px;
+     animation-name: movR;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movL {
+    0%   { left: 60px;}
+    50%  { left: 20px;}
+    100% { left: 60px;}
+}
+
+@keyframes movR {
+    0%   { left: 121px;}
+    50%  { left: 161px}
+    100% { left: 121px;}
+}
