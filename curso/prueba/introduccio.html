@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>funcion</title>
+</head>
+<body>
+	<p id="cuadrado"></p>
+	<br>
+	<p id = "par"></p>
+	<br>
+	<p id = "fact"></p>
+	<br>
+	<p id = "rand"></p>
+	<br>
+	<p id = "big"></p>
+<script>
+	document.getElementById("cuadrado").innerHTML =
+		"The square of 4 is  " + square(4) + ".";
+
+	function square(number) {
+	    return number*number;
+	} 
+	document.getElementById("par").innerHTML =
+		"4 is even? " + parity(4) + " .";
+
+	function parity(number) {
+	    return (number%2 == 0);
+	}
+	document.getElementById("fact").innerHTML =
+		"The factorial of 5 is " + factorial(5) + " .";
+
+	function factorial(number) {
+		if(number <= 1) return 1;
+	    return number*factorial(number-1);
+	}  
+	document.getElementById("rand").innerHTML =
+		"A random number could be   " + random() + " .";
+
+	function random() {
+		return Math.floor(Math.random ()*100);
+	} 
+	document.getElementById("big").innerHTML =
+		"The biggest number of the sequence 1,2,3,4 is " + biggest(1,2,3,4) + ".";
+
+	function biggest(first,sec,third,fourth) {
+		return Math.max(first,sec,third,fourth);
+	}
+	var myObj = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+	console.log(myObj);  
+</script>
+
+</body>
+</html>
