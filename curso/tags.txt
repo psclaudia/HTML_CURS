@@ -1,0 +1,19 @@
+- <br>  : Defines a single line break
+- <hr>  : Defines a thematic change in the content
+- <ul>  : Defines an unordered list
+- <ol>  : Defines an ordered list
+- <li>  : Defines a list item
+- <strong> : Defines important text
+- <b>   : Defines bold text
+- <em>  : Defines emphasized text 
+- <i>   : Defines a part of text in an alternate voice or mood
+- <u>   : Defines text that should be stylistically different from normal text
+- <h1>  : Defines HTML headings(biggest one)
+- <h6>  : Defines HTML headings(smallest one)
+- <tr>  : Defines a row in a table
+- <th>  : Defines a header cell in a table
+- <td>  : Defines a cell in a table
+- <sub> : Defines subscripted text
+- <sup> : Defines superscripted text
+- <legend> : Defines a caption for a <fieldset> element
+-EMTPY TAG:  elements with no content, for example <br>.
