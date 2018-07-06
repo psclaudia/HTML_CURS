@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>missatge personalitzat</title>
+	<style>
+		div {
+			margin-top: 500px;
+			text-align: center;
+			height: 20%;
+		}
+		div input {
+			font-size: 30px;
+		}
+	</style>
+	<script> 
+		function myFunction() {
+	    	prompt("Please enter your favorite color ", "color");
+	    }
+	    function nombre() {
+	    	 var x = document.getElementById("nombre").value; 
+			 document.getElementById("res").innerHTML = " HOLA " + x;
+		}
+		window.onload =myFunction();
+	</script>
+</head>
+<body>
+	<div>
+		<p>ESCRIU EL TEU NOM.</p>
+		<input type="text" id = "nombre" >
+		<input type = "submit" onclick="nombre()">
+		<p id = "res"> </p> 
+	</div>
+
+
+</body>
+</html>
