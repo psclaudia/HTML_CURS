@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>CLOCK</title> 
+		<style>
+			div {
+				border: 3px solid black;
+				border-radius: 20px;
+				margin: auto;
+				text-align: center;
+				height: 60%;
+				width: 60%;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				/*function start();*/
+				setInterval(time, 1000);
+			}
+			var m = 0;
+			var s = 0;
+			function time() {
+				++s;
+				if (s == 59) {
+					s = 0; 
+					++m;
+				}
+				document.getElementById("seconds").innerHTML = s;
+				document.getElementById("minutes").innerHTML = "0" + m;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<p id = "minutes"></p>
+			<p> : </p>
+			<p id = "seconds"></p>
+		</div>
+	</body>
+</html>
