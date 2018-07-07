@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CARROUSEL</title>
+	<style>
+			div {
+				margin: auto;
+				display: flex;
+				flex-direction:row;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				position: absolute;
+  				top: 50%; 
+  				left: 50%;
+  				transform: translate(-50%, -50%);
+  			}
+			button {
+  				font-size: 60px;
+				font-style: bold;
+			}
+			</style>
+
+	<script type="text/javascript">
+		var int;
+		window.onload = function() {
+				/*function start();*/
+				int = setInterval(imagen, 2000);
+				 document.getElementById("izq").onclick = function() {
+				 	clearInterval(int);
+				 	izquierda();
+				 	int = setInterval(imagen,2000);
+				 }
+				 document.getElementById("dcha").onclick = function() {
+				 	clearInterval(int);
+				 	imagen();
+				 	int = setInterval(imagen,2000);
+				 }
+			}
+			var color = "red";
+			function imagen() {
+				if (color == "green") {
+					color = "red";
+					document.getElementById("pict").src = "red.png";
+				}
+				else if(color == "red") {
+					color = "blue";
+					document.getElementById("pict").src = "blue.png";
+				}
+				else if(color == "blue") {
+					color = "green";
+					document.getElementById("pict").src = "green.png";
+				}
+			}
+			function izquierda() {
+				if (color == "blue") {
+					color = "red";
+					document.getElementById("pict").src = "red.png";
+				}
+				else if(color == "green") {
+					color = "blue";
+					document.getElementById("pict").src = "blue.png";
+				}
+				else if(color == "red") {
+					color = "green";
+					document.getElementById("pict").src = "green.png";
+				}
+			}	
+	</script>
+</head>
+<body>
+	<div>
+		<button id = "izq"> <-- </button>	
+		<img id="pict" src="red.png" width = 70% height= 70% >
+		<button id = "dcha"> --> </button>
+	</div>
+</body>
+</html>
