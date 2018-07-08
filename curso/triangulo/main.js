@@ -1,12 +1,9 @@
-var id;
-var pos;
 var object;
 
 
 
 window.onload = function(){
-	id = setInterval(move,300);
-	pos = 0;
+	setInterval(move,300);
 	object = document.getElementById('imagen');
 }
 
