@@ -1,4 +1,4 @@
-var spos = [{x:0,y:0}];
+  var spos = [{x:0,y:0}];
 var apos = {x:0,y:0};
 var size = 20; //same size for apple and snakes's head
 var WIDTH = 500;
@@ -11,6 +11,8 @@ var i;
 var newx;
 var newy;
 var eaten = false;
+var xx;
+var yy;
 
 window.onload = function() {
 	initialize();
@@ -34,21 +36,35 @@ function updateFruit() {
 }
 
 function updateSnake() {
-	if(eaten) {
+	if(eaten == true){
 		eaten = false;
-		spos.push({x:spos[parts-2].x,y:spos[parts-2].y});
+		for(i = parts-2; i > 0; i--) {
+			newx = spos[i-1].x;
+			newy = spos[i-1].y;
+			draw(newx,newy,size,"black");
+			spos[i].x = newx;
+			spos[i].y = newy;
+		}
+		spos.push({x:xx, y:yy});		
 	}
-	for(i = 0; i < parts; i++) {
-		newx = spos[i].x;
-		newy = spos[i].y;
-		if(dir.u == 1) newy = spos[i].y - size;
-		else if(dir.d == 1) newy = spos[i].y + size;
-		else if(dir.l == 1) newx = spos[i].x - size;
-		else if(dir.r == 1) newx = spos[i].x + size;
-		draw(newx,newy,size,"black");
-		spos[i].x = newx;
-		spos[i].y = newy;
+	else{
+		for(i = parts-1; i > 0; i--) {
+			newx = spos[i-1].x;
+			newy = spos[i-1].y;
+			draw(newx,newy,size,"black");
+			spos[i].x = newx;
+			spos[i].y = newy;			
+		}
 	}
+	newx = spos[0].x;
+	newy = spos[0].y;
+	if(dir.u == 1) newy = spos[0].y - size;
+	else if(dir.d == 1) newy = spos[0].y + size;
+	else if(dir.l == 1) newx = spos[0].x - size;
+	else if(dir.r == 1) newx = spos[0].x + size;
+	spos[0].x = newx;
+	spos[0].y = newy;
+	draw(newx,newy,size,"black");
 	
 }
 
@@ -78,14 +94,30 @@ function key(event){
 function update() {
 	ctx.clearRect(0,0,WIDTH,HEIGHT);
 	if(spos[0].x == apos.x && spos[0].y == apos.y) {
-		updateFruit();
 		++parts;
 		eaten = true;
+		xx = spos[parts-2].x;
+		yy = spos[parts-2].y;
+		updateFruit();	
+	}
+	else if(spos[0].x > WIDTH || spos[0].x < 0 || spos[0].y > HEIGHT || spos[0].y < 0 || crashes()){
+		clearInterval(interval);		
+		document.getElementById("play").disabled = false;
+		alert("GAME OVER");
 	}
 	else {
 		draw(apos.x,apos.y,size,"red");
 		updateSnake();
 	}
+}
+
+function crashes(){
+	var posx = spos[0].x;
+	var posy = spos[0].y;
+	for(i = 1; i< spos.length; ++i){
+		if(posx == spos[i].x && posy == spos[i].y) return true;
+	}
+	return false;
 }
 
 
