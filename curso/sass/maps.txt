@@ -1,0 +1,1 @@
+los maps son una gran manera de dar al código base una mejor estructura y crear pequeñas áreas de configuración. Los maps Sass facilitan el manejo y el cambio de valores sin afectar la lógica de todo el código base.
