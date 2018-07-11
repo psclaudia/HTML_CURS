@@ -2,15 +2,21 @@ html,body{
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	background-image: url("grey.jpg");
+	 background-repeat: no-repeat;
 }
 
 #cabecera {
+	z-index: 3;
 	position:fixed;
-	height: 80px;
-	width: 100%;
-	background-color: #625656;
 	display: flex;
 	align-items: center;
+	width: 100%;
+	height: 80px;
+	border-bottom: 10px solid #E9E8D3;
+	background-image: url("grey.jpg");
+	background-repeat: no-repeat;
+	
 }
 
 #generos {
@@ -35,4 +41,31 @@ html,body{
     justify-content: flex-end;
     font-size: 15px;
     color: white;
+}
+
+#series {
+	width: 100%;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-size: 15px;
+    color:  #E9E8D3;
+}
+
+#fotos {
+	width: 500px;
+	height: 300px;
+	border: 2px solid  #E9E8D3;
+}
+#series2 {
+	width: 100%;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-size: 15px;
+    color:  #E9E8D3;
+}
+
+#fotos2 {
+	width: 500px;
+	height: 300px;
+	border: 2px solid  #E9E8D3;
 }
