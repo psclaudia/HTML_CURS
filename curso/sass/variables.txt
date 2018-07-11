@@ -1,0 +1,11 @@
+Placing !default at the end of a variable declaration will have the following effect:
+
+If the variable already has an assignment, it will not be re-assigned
+Variables with null value will be considered unassigned and will be assigned with !default
+
+example:
+
+	$color: blue;
+	$color: green !default;
+
+	in this case, $color will be blue, because it has value, but if the variable was null, the variable would be green because of the !default falg;
