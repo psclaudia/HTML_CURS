@@ -15,16 +15,22 @@ var xx;
 var yy;
 
 window.onload = function() {
-	initialize();
+	document.getElementById("play").onclick = initialize;
 	window.onkeydown = function() {
 		key(event);
 	}
 }
 
 function initialize() {
+	spos = [{x:0,y:0}];
+	apos = {x:0,y:0};
+	parts = 1;
+	dir = {u:0,d:0,l:0,r:1};
+	eaten = false;
 	ctx = document.getElementById('container').getContext("2d");
 	updateFruit();
 	updateSnake();
+	document.getElementById("play").disabled = true;
 	interval = setInterval(update,150);
 }
 
