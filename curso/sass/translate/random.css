@@ -1,3 +1,8 @@
+$backcolor: #BEB295;
+$secondcolor: #EEEDEA;
+$thirdcolor: #297DB5;
+$altura: 55px;
+
 #container{
   height: 50%;
   weight: 100%;
@@ -33,20 +38,20 @@ padding:0pt 0pt 0em 20px;
 /* raco */
 
 #cap_estreta {
-  background-color: #BEB295;
-  height: 55px;
+  background: $backcolor;
+  height: $altura;
 }
 
 
 #cap_estreta #logo {
-  height: 55px;
+  height: $altura;
 }
 
 #cap_estreta #foto-raco {
   background-image: url("../imatges/salaOrdinadors.jpg");
   background-repeat: no-repeat;
   background-position: 200px top;
-  height:55px;
+  height:$altura;
   width:1300px;
 }
 /* barra:logout */
@@ -59,7 +64,7 @@ padding:0pt 0pt 0em 20px;
 }
 
 #info-alumne {
-  background-color:#BEB295;
+  background:$backcolor;
   background-image: url("../imatges/Cantonada_grisa_esquerra.gif");
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -68,7 +73,7 @@ padding:0pt 0pt 0em 20px;
     padding:0pt 1em 1em; 
 }
 h4 {
-  color:#297DB5;
+  color:$thirdcolor;
   margin: 0px;
 }
 
@@ -113,12 +118,12 @@ h4 {
 
 /* calendari */
 .texto_agenda {
-  color:#297DB5;
+  color:$thirdcolor;
  }
 
 .texto_agenda2 {
   font-weight: bold;
-  color:#BEB295;
+  color:$backcolor;
 }
 
 
@@ -136,7 +141,7 @@ main{
 .calendariMes td{
   width:2em;
   text-align:center;
-  background-color: #EEEDEA;
+  background: $secondcolor;
   padding:2px;
   font-size:80%;
   font-weight:bold;
@@ -154,25 +159,25 @@ main{
 
 
 .calendariMes td.calendariDiaSetmana {
-  color: #297DB5;
+  color: $thirdcolor;
   background-color: #D0D1CC;
    font-weight:normal;
    }
 
 .calendariMes td.diaAnterior ,.calendariMes td.diaFutur  {
   color:#808080;
-  background-color:#EEEDEA;
+  background:$secondcolor;
   
 }
 
 .calendariMes td.festa {
   color:#D61831;
-  background-color:#EEEDEA;
+  background:$secondcolor;
 }
 
 .calendariMes td.event {
   color:white;
-  background-color: #297DB5;
+  background:$thirdcolor;
 }
 .calendariMes td.avui {
  
@@ -270,7 +275,7 @@ section{
 }
 .horaris td {
   background-color: transparent;
-  border: 1px solid #297DB5;
+  border: 1px solid $thirdcolor;
   border-left: 0px;
   border-top: 0px;
 }
@@ -281,7 +286,7 @@ border: 0px;
 .horaris th{
   background-color:#D5E6F0;
   font-weight:bold;
-  color:#297DB5;
+  color:$thirdcolor;
   text-align: center;
   vertical-align: middle;
 }
