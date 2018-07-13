@@ -24,7 +24,7 @@ $().ready(function(){
 	});		
 });
 function getinfo() {
-	$.get("http://40.118.8.76/pokemons/" + id ,
+	$.get("http://40.118.8.76/pokemons/"+id,
 		function(data){
 			clear();
 			$("#code").text(data.num);
@@ -52,4 +52,41 @@ function clear() {
 	$("#name").text("");
 }
 
-		
+function search(){
+	var inp = $("#text").val();
+	if(inp == 1 || inp == "bulbasaur"){
+		$("#prev").prop("disabled", true);
+		$("#next").prop("disabled", false);
+	} 
+	else if(inp == 60 || inp == "polywag"){
+		$("#next").prop("disabled", true);
+		$("#prev").prop("disabled", false);
+	} 
+	var idnum;
+	var idname;
+	var existsnum = false;
+	var existsname = false;
+	$.get("http://40.118.8.76/pokemons/?num=" + inp,
+		function(pok){
+			if(pok.length != 0){
+				idnum = pok[0].id;
+				existsnum = true;
+				id = idnum;
+				getinfo();					
+			} 
+			else{
+				$.get("http://40.118.8.76/pokemons/?name=" + inp,
+					function(pok){
+						if(pok.length != 0){						
+							existsname = true;
+							idname = pok[0].id;
+						} 
+						if(existsname == true){
+							id = idname;
+							getinfo();
+						}
+						else alert("POKEMON NOT FOUND");
+	 			}, "json"); 	
+			}		
+	}, "json");
+}	
