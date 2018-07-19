@@ -5,25 +5,54 @@
 		<meta charset="UTF-8">
 		<title>WHAT TO WATCH</title>
 		<link rel="stylesheet" type="text/css" href="main.css">
-		<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<script type = "text/javascript" src = "jquery.min.js"></script>
 	   <script type="text/javascript" src="main.js"></script>
 
 	</head>
 
 	<body>
 		<header id = "cabecera">
+			<span id = "titulo"> WHAT TO WATCH</span>
 			<div id = "logo">
 				<span id = "nombre"> RANDOM </span>
 			</div>
 		</header>
 		
-		<div id = "series">
-			<img class = "flecha" src="media/leftarrow.png">
-			<div id = "fotos"> </div>
-			<img class = "flecha" src="media/rightarrow.png">
+		<div class = "series">
+			<img class='opaque' id = "serie0" src="media/blacklist.jpg" />
+			<img id = "serie1" src="media/blackmirror.jpg" />
+			<img id = "serie2" src="media/orange.jpg" />
+		  	<img id = "serie3" src="media/bones.jpg" />
+		  	<img id = "serie4" src="media/breakingbad.jpg" />
+			<img id = "serie5" src="media/criada.jpg" />
+		  	<img id = "serie6" src="media/got.jpg" />
+		  	<img id = "serie7" src="media/reasons.jpg" />
+			<img id = "serie8" src="media/sherlock.jpg" />
+		  	<img id = "serie9" src="media/vikingos.jpg" />
 		</div>
-		
-
+		<p id="controls">
+			<span  id="serietext0" class="selected">Black list</span>
+		  	<span  id="serietext1">Black mirror</span>
+		  	<span  id="serietext2">OITB</span>
+		  	<span  id="serietext3">Bones</span>
+		  	<span  id="serietext4">Breaking bad</span>
+		  	<span  id="serietext5">The Handmaid's Tale</span>
+		  	<span  id="serietext6">Game of thrones</span>
+		  	<span  id="serietext7">13 reasons why</span>
+		  	<span  id="serietext8">Sherlock</span>
+		  	<span  id="serietext9">Vikings</span>
+		</p>
+		<div class = "show">
+			<div class="overlay"></div>
+			<div class = "content">
+				<span class="close">&times;</span>
+		    	<p class = "description seriedescripcion0" id = "bl">Tom Keen</p>
+		    	<p class = "description seriedescripcion1" id = "bm">Black mirror.</p>
+		    	<p class = "description seriedescripcion2" id = "o">orange</p>
+		    	<p class = "description seriedescripcion3" id = "b">bones</p>
+		    	<p class = "description seriedescripcion4" id = "bm">Some text in the Modal 22..</p>
+		    	<p class = "description seriedescripcion5" id = "bm">Some text in the Modal 22..</p>
+			</div>
+		</div>
 	</body>
 </html>

@@ -6,6 +6,15 @@ html,body{
 	background-repeat: no-repeat;
 }
 
+#titulo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+
+
 #cabecera {
 	z-index: 3;
 	position:fixed;
@@ -34,26 +43,100 @@ html,body{
     color: white;
 }
 
-#series {
-	padding-top: 80px;
-	width: 100%;
-	height: 600px;
+.series {
+	padding-top: 250px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position:relative;
+	height:300px;
+	width: 90%;
+	overflow: hidden;
+	margin: auto;
+	cursor: pointer;
 }
-
-.flecha{
-	height: 20%;
-	width: 10%;
-}
-
-#fotos {
-	height: 80%;
-	width: 70%;
-	background-image: url("media/got.jpg");
-	background-size: cover;
-    display: flex;
+.series img {
+	height:90%;
+	display: flex;
 	align-items: center;
 	justify-content: center;
+	position:absolute;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+	opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
 }
+
+.series img.opaque {
+	opacity:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+
+#controls {
+  text-align:center;
+}
+#controls span {
+  padding-right:2em;
+  cursor:pointer;
+  color: #FB8544;
+}
+
+.show{
+    z-index: 999;
+    display: none;
+}
+.show .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.66);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.show .content{
+    width: 600px;
+    height: 400px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.content p{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover;
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*.img-show span{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    cursor: pointer;
+    color:white;
+}*/
