@@ -4,19 +4,8 @@ var num = 0;
 $(document).ready(function() {
 	$(".description").css("display","none");
 
-	setInterval(carrusel,3000);
- 	
- 	function carrusel() {
- 		$(".series img").removeClass("opaque");
- 		if (num == 9) num = 0;
- 		else ++num;
- 		numserie = num.toString();
- 		$(".series img").eq(numserie).addClass("opaque");
-	    $("#controls span").removeClass("selected");
-	    $(this).addClass("selected");
- 	}
-
  	$("#controls").on('click', 'span', function() {
+ 		$("video")[numserie].currentTime = 0;
 	   	$(".series img").removeClass("opaque");
 	    var newImage = $(this).index();
 	    console.log(newImage);
@@ -29,6 +18,7 @@ $(document).ready(function() {
     /*funcion popup*/
     "use strict";
     $(".series").click(function () {
+    	$("video")[numserie].currentTime = 0;
         $(".series").fadeOut();
         $("#controls").fadeOut();
         $(".show").fadeIn();
@@ -38,9 +28,11 @@ $(document).ready(function() {
     }),
     
     $("span, .overlay").click(function () {
+    	$("video")[numserie].pause();
         $(".show").fadeOut();
-         $(".series").fadeIn();
+        $(".series").fadeIn();
         $("#controls").fadeIn();
+
     }),
 
     $("#controls span").click(function () {
