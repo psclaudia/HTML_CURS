@@ -49,6 +49,10 @@ html,body{
     cursor: pointer;
 }
 
+#nombre{
+	user-select: none;
+}
+
 .series {
 	padding-top: 250px;
 	display: flex;
@@ -116,10 +120,16 @@ html,body{
     overflow: auto;
 }
 
+.description{
+	display: flex;
+	flex-direction: column;
+}
+
 .content .title{
     width: 100%;
-    height: 100%;
+    height: 10%;
     position: absolute;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     color: #B28CC2;
@@ -130,23 +140,28 @@ html,body{
 .content .info{
     width: 90%;
     height: 100%;
-    position: fixed;
-    padding-top: 40px;
+    position: relative;
+    padding-top: 60px;
     color: white;
     font-size: 20px;
     text-align: justify;
     margin-left: 20px;
 }
 
+.video-container{
+	display: flex;
+    justify-content: center;
+}
+
 .content video{
 	width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: center;
-    margin: auto;
-    padding-top: 50%;
+	position: absolute;
+	margin: 0 auto;
+    margin-bottom: 20px;    
 }
+
+
+
 
 /* The Close Button */
 .close {
@@ -172,3 +187,4 @@ html,body{
     cursor: pointer;
     color:white;
 }*/
+
